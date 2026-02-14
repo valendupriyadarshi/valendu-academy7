@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Valendu Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-futbol"></i>
+                <span>Valendu Academy</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><button class="btn btn-secondary btn-sm" id="logoutBtn">Logout</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 id="userNameDisplay">User</h3>
+                <p id="userLevelDisplay">Beginner</p>
+            </div>
+
+            <nav class="sidebar-menu">
+                <button class="sidebar-link active" data-section="overview">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Overview</span>
+                </button>
+                <button class="sidebar-link" data-section="training">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Training Drills</span>
+                </button>
+                <button class="sidebar-link" data-section="booking">
+                    <i class="fas fa-calendar"></i>
+                    <span>Book Session</span>
+                </button>
+                <button class="sidebar-link" data-section="progress">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Progress Tracker</span>
+                </button>
+                <button class="sidebar-link" data-section="bmi">
+                    <i class="fas fa-calculator"></i>
+                    <span>BMI Calculator</span>
+                </button>
+                <button class="sidebar-link" data-section="leaderboard">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h2>Welcome, <span id="welcomeName">User</span>!</h2>
+                    <p>Here's your training overview</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon speed">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Speed</h4>
+                            <p class="stat-value" id="speedStat">8.5</p>
+                            <p class="stat-label">km/h</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon stamina">
+                            <i class="fas fa-lungs"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Stamina</h4>
+                            <p class="stat-value" id="staminaStat">78</p>
+                            <p class="stat-label">%</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon strength">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Strength</h4>
+                            <p class="stat-value" id="strengthStat">85</p>
+                            <p class="stat-label">%</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon sessions">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Sessions</h4>
+                            <p class="stat-value" id="sessionsStat">12</p>
+                            <p class="stat-label">completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Progress -->
+                <div class="progress-overview">
+                    <h3>Weekly Progress</h3>
+                    <div id="savedDrills" class="drills-list"></div>
+                </div>
+            </section>
+
+            <!-- Training Drills Section -->
+            <section id="training" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Training Drills Library</h2>
+                    <p>Access all available drills</p>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Beginner">Beginner</button>
+                    <button class="filter-btn" data-filter="Intermediate">Intermediate</button>
+                    <button class="filter-btn" data-filter="Advanced">Advanced</button>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-category="all">All Skills</button>
+                    <button class="filter-btn" data-category="Speed">Speed</button>
+                    <button class="filter-btn" data-category="Passing">Passing</button>
+                    <button class="filter-btn" data-category="Shooting">Shooting</button>
+                    <button class="filter-btn" data-category="Defense">Defense</button>
+                </div>
+
+                <div id="drillsContainer" class="drills-grid"></div>
+            </section>
+
+            <!-- Booking Section -->
+            <section id="booking" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Book a Training Session</h2>
+                    <p>Schedule your training with our coaches</p>
+                </div>
+
+                <div class="booking-form">
+                    <div class="form-group">
+                        <label for="bookingDate">Select Date</label>
+                        <input type="date" id="bookingDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTime">Select Time</label>
+                        <select id="bookingTime" required>
+                            <option value="">Choose a time slot</option>
+                            <option value="08:00">08:00 AM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coachType">Coach Type</label>
+                        <select id="coachType" required>
+                            <option value="">Select coach type</option>
+                            <option value="General">General Coach</option>
+                            <option value="Position">Position Specialist</option>
+                            <option value="Strength">Strength & Conditioning</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" id="bookBtn">Book Session</button>
+                </div>
+
+                <div id="bookingConfirmation" class="booking-confirmation"></div>
+
+                <div class="booked-sessions">
+                    <h3>Your Booked Sessions</h3>
+                    <div id="bookedSessionsList" class="sessions-list"></div>
+                </div>
+            </section>
+
+            <!-- Progress Tracker Section -->
+            <section id="progress" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Progress Tracker</h2>
+                    <p>Track your improvements over time</p>
+                </div>
+
+                <div class="progress-input-section">
+                    <h3>Update Weekly Stats</h3>
+                    <div class="stats-input-grid">
+                        <div class="form-group">
+                            <label for="inputSpeed">Speed (km/h)</label>
+                            <input type="number" id="inputSpeed" step="0.1" value="8.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputStamina">Stamina (%)</label>
+                            <input type="number" id="inputStamina" min="0" max="100" value="78">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputStrength">Strength (%)</label>
+                            <input type="number" id="inputStrength" min="0" max="100" value="85">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="updateStatsBtn">Update Stats</button>
+                </div>
+
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <canvas id="speedChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="staminaChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="strengthChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BMI Calculator Section -->
+            <section id="bmi" class="dashboard-section">
+                <div class="section-header">
+                    <h2>BMI Calculator</h2>
+                    <p>Calculate and track your body mass index</p>
+                </div>
+
+                <div class="bmi-calculator">
+                    <div class="bmi-input-group">
+                        <div class="form-group">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" id="height" placeholder="170" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="70" required>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="calculateBmiBtn">Calculate BMI</button>
+
+                    <div id="bmiResult" class="bmi-result"></div>
+                </div>
+            </section>
+
+            <!-- Leaderboard Section -->
+            <section id="leaderboard" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Player Leaderboard</h2>
+                    <p>Top performing athletes</p>
+                </div>
+
+                <div id="leaderboardContainer" class="leaderboard"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- WhatsApp Channel Button -->
+    <a href="https://whatsapp.com/channel/0029Vb7achN2kNFiwk0ICg3p" target="_blank" class="whatsapp-button" title="Join our WhatsApp Channel">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

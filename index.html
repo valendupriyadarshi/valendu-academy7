@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valendu Academy - Train Like a Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-futbol"></i>
+                <span>Valendu Academy</span>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#hallOfFame" class="nav-link">Hall of Fame</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#drills" class="nav-link">Drills</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <button class="dark-mode-toggle-nav" id="darkModeToggleNav">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">From Beginner to Pro Footballer</h1>
+            <p class="hero-subtitle">Train Smart. Play Hard. Become Legendary.</p>
+            <button class="btn btn-primary" id="heroBtn">Start Training</button>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-counters">
+                <div class="counter-card">
+                    <h3 class="counter-number" data-target="500">0</h3>
+                    <p class="counter-label">Students</p>
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="counter-card">
+                    <h3 class="counter-number" data-target="50">0</h3>
+                    <p class="counter-label">Tournaments</p>
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="counter-card">
+                    <h3 class="counter-number" data-target="10">0</h3>
+                    <p class="counter-label">Awards</p>
+                    <i class="fas fa-medal"></i>
+                </div>
+                <div class="counter-card">
+                    <h3 class="counter-number" data-target="100">0</h3>
+                    <p class="counter-label">Success Rate %</p>
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About ProFootball Academy</h2>
+                <p class="section-subtitle">Your complete platform to master the beautiful game</p>
+            </div>
+
+            <div class="about-content">
+                <p>ProFootball Academy is designed to help aspiring footballers develop their skills systematically. From basic techniques to advanced tactical play, we provide comprehensive training programs tailored to your level and position.</p>
+                <p>Whether you're a goalkeeper perfecting your saves, a defender strengthening your positioning, a midfielder controlling the game, or a striker finding the net, we have specialized training paths for every role on the pitch.</p>
+                <button class="btn btn-primary" id="roadmapBtn">View Roadmap</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Roadmap Section -->
+    <section id="training" class="training-roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2>Training Roadmap</h2>
+                <p class="section-subtitle">Choose your level and start your journey</p>
+            </div>
+
+            <div class="roadmap-cards">
+                <div class="roadmap-card">
+                    <div class="card-header">
+                        <i class="fas fa-running"></i>
+                        <h3>Beginner</h3>
+                    </div>
+                    <p class="card-description">Master the fundamentals of football including basic techniques, positioning, and game rules.</p>
+                    <button class="btn btn-secondary roadmap-btn" data-level="beginner">Learn More</button>
+                    <div class="roadmap-details" id="details-beginner">
+                        <ul>
+                            <li>Ball Control & Dribbling</li>
+                            <li>Basic Passing Techniques</li>
+                            <li>Proper Shooting Form</li>
+                            <li>Field Awareness</li>
+                            <li>Game Rules & Positioning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="roadmap-card">
+                    <div class="card-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Intermediate</h3>
+                    </div>
+                    <p class="card-description">Develop advanced techniques, tactical understanding, and match performance skills.</p>
+                    <button class="btn btn-secondary roadmap-btn" data-level="intermediate">Learn More</button>
+                    <div class="roadmap-details" id="details-intermediate">
+                        <ul>
+                            <li>Advanced Dribbling & Tricks</li>
+                            <li>Precision Passing & First Touch</li>
+                            <li>Powerful & Accurate Shooting</li>
+                            <li>Tactical Positioning</li>
+                            <li>Team Coordination & Set Pieces</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="roadmap-card">
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Advanced</h3>
+                    </div>
+                    <p class="card-description">Master professional-level strategies, elite techniques, and competitive match tactics.</p>
+                    <button class="btn btn-secondary roadmap-btn" data-level="advanced">Learn More</button>
+                    <div class="roadmap-details" id="details-advanced">
+                        <ul>
+                            <li>Elite Ball Control</li>
+                            <li>Advanced Tactical Play</li>
+                            <li>Professional Match Strategies</li>
+                            <li>Psychological Conditioning</li>
+                            <li>Physical Performance & Recovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Position-Specific Training Section -->
+    <section id="positions" class="positions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Position-Specific Training</h2>
+                <p class="section-subtitle">Master your role on the pitch</p>
+            </div>
+
+            <div class="positions-grid">
+                <div class="position-card">
+                    <div class="position-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Goalkeeper</h3>
+                    <p>Reflex training, positioning, and penalty saves</p>
+                    <button class="btn btn-secondary view-drills-btn" data-position="Goalkeeper">View Drills</button>
+                </div>
+
+                <div class="position-card">
+                    <div class="position-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Defender</h3>
+                    <p>Tackling, marking, and defensive positioning</p>
+                    <button class="btn btn-secondary view-drills-btn" data-position="Defender">View Drills</button>
+                </div>
+
+                <div class="position-card">
+                    <div class="position-icon">
+                        <i class="fas fa-person-hiking"></i>
+                    </div>
+                    <h3>Midfielder</h3>
+                    <p>Control, passing accuracy, and game flow</p>
+                    <button class="btn btn-secondary view-drills-btn" data-position="Midfielder">View Drills</button>
+                </div>
+
+                <div class="position-card">
+                    <div class="position-icon">
+                        <i class="fas fa-person-running"></i>
+                    </div>
+                    <h3>Striker</h3>
+                    <p>Finishing, positioning, and goal-scoring techniques</p>
+                    <button class="btn btn-secondary view-drills-btn" data-position="Striker">View Drills</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Position Drills -->
+    <div class="modal" id="drillsModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modalTitle">Position Drills</h2>
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Football Legends Section -->
+    <section id="legends" class="legends">
+        <div class="container">
+            <div class="section-header">
+                <h2>Football Legends Who Inspire the World</h2>
+                <p class="section-subtitle">Learn from the greatest players of all time</p>
+            </div>
+
+            <div class="legends-grid">
+                <div class="legend-card">
+                    <div class="legend-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Cristiano Ronaldo</h3>
+                    <p class="legend-summary">Portuguese icon and modern football legend</p>
+                    <button class="btn btn-secondary achievement-btn" data-player="ronaldo">View Achievements</button>
+                    <div class="achievements" id="achievements-ronaldo">
+                        <ul>
+                            <li>5 Ballon d'Or Awards</li>
+                            <li>5 Champions League Titles</li>
+                            <li>Euro 2016 Winner</li>
+                            <li>850+ Career Goals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="legend-card">
+                    <div class="legend-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Lionel Messi</h3>
+                    <p class="legend-summary">Argentine genius and FIFA's greatest</p>
+                    <button class="btn btn-secondary achievement-btn" data-player="messi">View Achievements</button>
+                    <div class="achievements" id="achievements-messi">
+                        <ul>
+                            <li>8 Ballon d'Or Awards</li>
+                            <li>FIFA World Cup 2022 Winner</li>
+                            <li>4 Champions League Titles</li>
+                            <li>Copa America Winner</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="legend-card">
+                    <div class="legend-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Pelé</h3>
+                    <p class="legend-summary">Brazilian legend and three-time World Cup champion</p>
+                    <button class="btn btn-secondary achievement-btn" data-player="pele">View Achievements</button>
+                    <div class="achievements" id="achievements-pele">
+                        <ul>
+                            <li>3 FIFA World Cup Titles</li>
+                            <li>1000+ Career Goals</li>
+                            <li>Olympic Gold Medal</li>
+                            <li>International Football Legend</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="legend-card">
+                    <div class="legend-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Diego Maradona</h3>
+                    <p class="legend-summary">Argentine magician and World Cup hero</p>
+                    <button class="btn btn-secondary achievement-btn" data-player="maradona">View Achievements</button>
+                    <div class="achievements" id="achievements-maradona">
+                        <ul>
+                            <li>FIFA World Cup 1986 Winner</li>
+                            <li>Argentina Legend & Captain</li>
+                            <li>Serie A Champion</li>
+                            <li>Unparalleled Dribbling Ability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hall of Fame Section -->
+    <section id="hallOfFame" class="hall-of-fame">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hall of Fame</h2>
+                <p class="section-subtitle">Celebrating our elite players and champions</p>
+            </div>
+
+            <div class="hall-of-fame-grid">
+                <div class="elite-player-card">
+                    <div class="elite-badge">Elite Player</div>
+                    <div class="player-avatar-section">
+                        <div class="player-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="player-info">
+                        <h2 class="player-name">Valendu Priyadarshi</h2>
+                        
+                        <div class="position-badge">
+                            <i class="fas fa-futbol"></i>
+                            <span>Forward Striker / Left Winger</span>
+                        </div>
+
+                        <div class="player-trademark">
+                            <span class="trademark-label">Trademark:</span>
+                            <p class="trademark-text">Absolute Finishing</p>
+                        </div>
+
+                        <div class="achievements-list">
+                            <h4><i class="fas fa-trophy"></i> Achievements</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> District Champion</li>
+                                <li><i class="fas fa-star"></i> State Champion</li>
+                                <li><i class="fas fa-star"></i> Selected for Nationals</li>
+                                <li><i class="fas fa-star"></i> Captain of District Team (U-17)</li>
+                            </ul>
+                        </div>
+
+                        <div class="player-stats">
+                            <div class="stat-item">
+                                <div class="stat-counter" data-target="67">0</div>
+                                <p class="stat-label">Goals</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-counter" data-target="14">0</div>
+                                <p class="stat-label">Assists</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-counter" data-target="25">0</div>
+                                <p class="stat-label">Chances Created</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Performer Section -->
+    <section id="elitePerformer" class="elite-performer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elite Performer</h2>
+                <p class="section-subtitle">Outstanding talent and exceptional performance</p>
+            </div>
+
+            <div class="elite-performer-grid">
+                <div class="performer-card">
+                    <div class="performer-avatar-section">
+                        <div class="performer-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="performer-info">
+                        <h2 class="player-name">Gajendra singh</h2>
+
+                        <div class="position-badge-performer">
+                            <i class="fas fa-futbol"></i>
+                            <span>Forward Striker</span>
+                        </div>
+
+                        <div class="position-badge-performer">
+                            <i class="fas fa-futbol"></i>
+                            <span>Left Winger</span>
+                        </div>
+
+                        <div class="performer-achievement">
+                            <h4><i class="fas fa-award"></i> Recognition</h4>
+                            <p>District Champion</p>
+                        </div>
+
+                        <div class="performer-trademark">
+                            <span class="trademark-label">Signature:</span>
+                            <p class="trademark-text">Chance Creation</p>
+                        </div>
+
+                        <div class="performer-stats">
+                            <div class="progress-stat">
+                                <div class="stat-header">
+                                    <span class="stat-name"><i class="fas fa-futbol"></i> Goals</span>
+                                    <span class="stat-value">45</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%" data-target="45"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-stat">
+                                <div class="stat-header">
+                                    <span class="stat-name"><i class="fas fa-handshake"></i> Assists</span>
+                                    <span class="stat-value">23</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%" data-target="23"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-stat">
+                                <div class="stat-header">
+                                    <span class="stat-name"><i class="fas fa-bullseye"></i> Big Chances Created</span>
+                                    <span class="stat-value">18</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%" data-target="18"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drill Library Section -->
+    <section id="drills" class="drills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Training Drills Library</h2>
+                <p class="section-subtitle">Master essential football skills with our curated drill library</p>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Drills</button>
+                    <button class="filter-btn" data-filter="Beginner">Beginner</button>
+                    <button class="filter-btn" data-filter="Intermediate">Intermediate</button>
+                    <button class="filter-btn" data-filter="Advanced">Advanced</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-category="all">All Skills</button>
+                    <button class="filter-btn" data-category="Speed">Speed</button>
+                    <button class="filter-btn" data-category="Passing">Passing</button>
+                    <button class="filter-btn" data-category="Shooting">Shooting</button>
+                    <button class="filter-btn" data-category="Defense">Defense</button>
+                </div>
+            </div>
+
+            <div id="drillsContainer" class="drills-grid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student Testimonials</h2>
+                <p class="section-subtitle">Hear from our successful athletes</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="student-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="student-info">
+                                <h4>Ahmed Hassan</h4>
+                                <p class="student-position">Midfielder</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Valendu Academy transformed my game completely. The personalized training programs and expert coaching helped me improve my passing accuracy and tactical awareness significantly."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="student-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="student-info">
+                                <h4>Priya Sharma</h4>
+                                <p class="student-position">Striker</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I increased my shooting accuracy by 40% within three months. The structured drills and feedback from coaches made all the difference in my performance."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="student-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="student-info">
+                                <h4>Rohit Kumar</h4>
+                                <p class="student-position">Defender</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <p class="testimonial-text">"The defensive positioning modules helped me understand the game at a deeper level. Now I'm playing with much more confidence and consistency."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="student-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="student-info">
+                                <h4>Zainab Ali</h4>
+                                <p class="student-position">Goalkeeper</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The goalkeeper-specific training was exactly what I needed. My reflexes improved dramatically and I feel much more prepared for competitive matches."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="student-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="student-info">
+                                <h4>Vikram Singh</h4>
+                                <p class="student-position">Midfielder</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best decision ever! The platform is user-friendly, the content is premium, and the progress tracking helped me stay motivated throughout my training journey."</p>
+                    </div>
+                </div>
+
+                <button class="slider-nav prev" id="prevSlide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-nav next" id="nextSlide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="slider-indicators" id="sliderIndicators"></div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="leaderboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Players</h2>
+                <p class="section-subtitle">Our elite performers</p>
+            </div>
+
+            <div id="leaderboardDisplay" class="leaderboard-cards"></div>
+        </div>
+    </section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Weekly Training Plan</h2>
+                <p class="section-subtitle">A structured program for consistent improvement</p>
+            </div>
+
+            <div class="weekly-schedule">
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Monday</h3>
+                    <p>Ball Control & Dribbling</p>
+                    <p class="time">60 minutes</p>
+                </div>
+
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Tuesday</h3>
+                    <p>Passing & First Touch</p>
+                    <p class="time">60 minutes</p>
+                </div>
+
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Wednesday</h3>
+                    <p>Shooting & Finishing</p>
+                    <p class="time">60 minutes</p>
+                </div>
+
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Thursday</h3>
+                    <p>Tactical Training & Positioning</p>
+                    <p class="time">75 minutes</p>
+                </div>
+
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Friday</h3>
+                    <p>Set Pieces & Game Situations</p>
+                    <p class="time">60 minutes</p>
+                </div>
+
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Saturday</h3>
+                    <p>Match Play & Application</p>
+                    <p class="time">90 minutes</p>
+                </div>
+
+                <div class="day-plan">
+                    <h3><i class="fas fa-calendar-day"></i> Sunday</h3>
+                    <p>Rest & Recovery</p>
+                    <p class="time">Active Recovery</p>
+                </div>
+            </div>
+
+            <div class="plan-action">
+                <button class="btn btn-primary" id="downloadBtn">Download Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p class="section-subtitle">Have questions? Reach out to us</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div class="success-message" id="successMessage"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ProFootball Academy. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <button class="btn btn-secondary back-to-top" id="backToTop">Back to Top</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotButton" title="Chat with AI Mentor">
+            <div class="chatbot-button-content">
+                <i class="fas fa-comments"></i>
+                <span class="chatbot-button-text">AI Mentor</span>
+            </div>
+        </button>
+
+        <div class="chatbot-window" id="chatbotWindow">
+            <!-- Chat Header -->
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <h3>AI Mentor</h3>
+                    <div class="online-status">
+                        <span class="status-dot"></span>
+                        <span>Online</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+
+            <!-- Input Area -->
+            <div class="chatbot-input-area">
+                <input
+                    type="text"
+                    class="chatbot-input"
+                    id="chatbotInput"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                />
+                <button class="chatbot-send-btn" id="chatbotSendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- WhatsApp Channel Button -->
+    <a href="https://whatsapp.com/channel/0029Vb7achN2kNFiwk0ICg3p" target="_blank" class="whatsapp-button" title="Join Official WhatsApp Channel">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
